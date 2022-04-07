@@ -1,31 +1,21 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
-apply plugin: 'kotlin-kapt'
-
-apply from: "$rootDir/gradle/scripts/dependencies.gradle"
 
 android {
     compileSdkVersion Versions.compileSdkVersion
 
     defaultConfig {
-        versionCode Versions.appVersionCode
-        versionName Versions.appVersionName
-        applicationId 'io.softpay.softpos'
         minSdkVersion Versions.minSdkVersion
         targetSdkVersion Versions.targetSdkVersion
+        versionCode Versions.appVersionCode
+        versionName Versions.appVersionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            debuggable false
             minifyEnabled true
-            testCoverageEnabled false
-        }
-
-        debug {
-            debuggable true
-            minifyEnabled false
         }
     }
 
@@ -45,4 +35,8 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = Versions.kotlinCompilerExtensionVersion
     }
+}
+
+dependencies {
+    implementation project(":presentation:ui_base")
 }

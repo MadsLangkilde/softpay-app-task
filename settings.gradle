@@ -1,2 +1,8 @@
 include ':app'
 include ':sdk'
+
+// Presentation modules
+include ':presentation:feature_transaction'
+include ':presentation:feature_splashscreen'
+include ':presentation:ui_base'
+

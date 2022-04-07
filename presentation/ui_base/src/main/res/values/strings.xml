@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SoftPOS</string>
+    <string name="enter_amount">Enter amount</string>
+    <string name="total_amount">Total amount</string>
+    <string name="confirm_transaction_headline">Can you confirm this purchase?</string>
+    <string name="store_name">Store</string>
+    <string name="store_address">Address</string>
+    <string name="store_postal_code">Postal code</string>
+</resources>
